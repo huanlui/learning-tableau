@@ -198,11 +198,87 @@ Hemos arrastrado dos veces la longitud a row y nos apartecen dos marks. De uno p
 
 Se le pueden añadir sheets al tooltip!!!! 😱
 
+## Joins en Tableau
+
+**Ni campos calculados ni joins deberían hacerse aquí. Sería mejor hacerlo en tu proceso previo**
+
+En data, new datasource. Cogemos education_clean. 
+
+Despupués, al lado de connetions, le damos a add y seleccionamos militar. Vamos a hacer join por country and year. 
+
+Una vez hecho esto, podemos hacer lo que queremos igual que antes. 
+
+Eduación: gasto en educación por país, en % de PIB. 
+Militar: gasto en militar por pais, en $ de PIB.
+
+Podemos:
+- Comprar militar vs educación. 
+- Scatterpolot. 
+- Mapa
+- Evolución. 
+
+En analytics, consdtant line podemos sacar líneas de referencia.
+
+También podemos sacar el mapa del país concreto en el filtro. Ojo, si tenemos la chincheta puesta en el mapa. 
+
+Si después creamos un dashboard con filtro, podemos tener una story en la que cada slide sea un país (no conseguí hacerlo)
+
+## Chicago salaries
+
+- Nombre de la persona.
+- Position title.
+- Department.
+- Anual salary
+
+Ojo, que hay personas que se llaman igual y que tiene la misma posición en el mismo departamento. Vamos a intentar hacer un 
+id
+
+Intenciones:
+- Compraración
+- Distribución de salario.
+
+## Satellites
+
+Cneso de datelites. Ano en que se lanzó, quién lo lanzo, a qué altura está volando. 
+
+Hemos creado un campo adicional para eliminar los nulos. Esto,de nuevo, lo suyo sería que lo hicieramos en fases anteriores, no en tableau
+
+```
+IF ISNULL([Detailed Purpose]) THEN
+"Nu se"
+ELSE
+[Detailed Purpose]
+END
+```
+
+También está tableau prep builder. para manipular datos 
+
+Intenciones:
+- Comparación: País con más satelites, cómo se usan los satélites, por donde circulan los satélites
+- Cómo evoluciona el lanzamiento de satelites y su uso. 
+- Mapa: número de satélites por país. 
+
+## De Niro
+
+Cuándo empieza a ir mal la carrera de De Niro
+
+Ojo, que los datos sesgas la realidad. 
+
+## 
+
+## El de canciones no lo ha hecho. Ver vídeo.
+
+
 ## Chascariillos
+
+- Sebastien trabaja en predecir de 12 a 60 horas antes los niveles de contaminación de Madrid de forma probabilística (en lugar de decir el nivel, dice la distribición de probabilidad). Así es más fácil hacer una decisión basada en el coste. 
 
 - [Catálogo de visualizaciones](https://xeno.graphics/articles/on-graphonyms-the-importance-of-chart-type-names/)
 
 - Jose Luis comenta que ellos usan una extensión para excel y power point que se llama [think-cell](https://www.think-cell.com/es/)
 
 - Isaac Reyes, un _gurú_ de visualización sigue usando excel y power point. El cree que klo importante es el storytelling, en el que cree que los 
-  gráficos deben ser sencillos. Con excel/power point puede personalizar la presentación aunque no puedas hacer cojográficos. Dejo un [link a un artículo suyo](https://medium.com/@ODSC/isaac-reyes-on-the-key-principles-of-data-storytelling-at-odsc-east-2018-6bfcdcf581b2.)
+  gráficos deben ser sencillos. Con excel/power point puede personalizar la presentación aunque no puedas hacer cojográficos. Dejo un [link a un artículo suyo](https://medium.com/@ODSC/isaac-reyes-on-the-key-principles-of-data-storytelling-at-odsc-east-2018-6bfcdcf581b2.).
+  
+  - Hadoop, usa disco, HDFS. Spark,va en memoria. En Haddop, para hacer queries, usábamos Hive/PIC, y en SPARK, Impala. 
+  En Google, tenemos Big Query, en AWS. Athnne te permite hacer queries sql a algo que tengas en s3. 
