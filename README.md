@@ -44,6 +44,8 @@ que el color es lo peor, porque hay mucho daltónico.
 
 ![ranking de visualizaciones](img/ranking.png)
 
+(de [este paper](https://research.tableau.com/sites/default/files/p110-mackinlay.pdf))
+
 Lo mejor es intentar que el gráfico quede bien en vlanco y negro y luego ya, si queremos reforzar, poner color. 
 
 ## Preattentive Processing
@@ -154,8 +156,7 @@ Podemos hacer:
 
 ## life countries
 
-
-## Datos geográficos
+Representamos países. 
 
 Los datos geográficos se pueden codificar en formatos espaciales como el geojson, topojson o shapefile.
 
@@ -166,6 +167,42 @@ http://geojson.io/
 
 Una vez que creáis vuestro fichero, lo podéis abrir en Tableau como fichero espacial.
 
+Recomendación: siempre debemos añadirle latitud y longitud de los datos que generemos. 
+
+## world temperatures
+
+EL GHCN es una base de datos de datos meteorógicos de todo el mundo. En ese dataset se ha cogido la estación más cercna a la ciudad.
+
+Longitude se suele abreviar como lgn. 
+
+Aquí las columnas vienen como F1, F2, etc. Las hemos renombrado. Además, le hemos puesto rol geográfico a las columnas latitud, longitud,
+país y ciudad. 
+
+Intenciones posibles:
+- Mapa. Para el mapa podemos hacerlo usando nuestra latitud y longitud o usando los servicios de geolocalización de tablaue
+- Comparación.
+- Evolución.
+- Relación lat/lng con temperatura. 
+
+Hemos tenido que poner la latitud y longitud como dimensión en lugar de  como measure
+
+Hemos arrastrada la fecha a pages y eso permite hacer un play en la zona derecha para tener un gráfico que va avanzando en el tiempo
+
+Vemos que tenemos datos erróneos (bajón de temperatura). Podemos pinchar en el dato y hacer `exclude`.
+
+Además, hemos creado un dashboard en el que podemos mostrar las gr'aficas y filtrar por ambas.
+
+Tambi'en hemos intentado usar la locaclización automática de tableau. Lo hace más o menos, pero siempre es mejor tener nuestra propia pat y lgn. 
+
+Hemos arrastrado dos veces la longitud a row y nos apartecen dos marks. De uno ponemos city en lugar de pais y luego hacemos dual axis (mejor mira el vídeo...)
+
+Se le pueden añadir sheets al tooltip!!!! 😱
+
 ## Chascariillos
 
-[Catálogo de visualizaciones](https://xeno.graphics/articles/on-graphonyms-the-importance-of-chart-type-names/)
+- [Catálogo de visualizaciones](https://xeno.graphics/articles/on-graphonyms-the-importance-of-chart-type-names/)
+
+- Jose Luis comenta que ellos usan una extensión para excel y power point que se llama [think-cell](https://www.think-cell.com/es/)
+
+- Isaac Reyes, un _gurú_ de visualización sigue usando excel y power point. El cree que klo importante es el storytelling, en el que cree que los 
+  gráficos deben ser sencillos. Con excel/power point puede personalizar la presentación aunque no puedas hacer cojográficos. Dejo un [link a un artículo suyo](https://medium.com/@ODSC/isaac-reyes-on-the-key-principles-of-data-storytelling-at-odsc-east-2018-6bfcdcf581b2.)
