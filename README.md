@@ -160,6 +160,8 @@ Podemos hacer:
 
 Geojson : formato paran generar áreas. Hay páginas para crártelos o bajártelos. Por ejemplo, te puedes bajar los barrios de Madrid. 
 
+[Catálogo de visualizaciones](https://xeno.graphics/articles/on-graphonyms-the-importance-of-chart-type-names/)
+
 Tableau es capaz de leerlo. 
 
 Por ejemplo, [esta página]
