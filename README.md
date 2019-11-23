@@ -42,7 +42,7 @@ Codificar una variable a algo geométrico. Por ejemplo, de un valor a ángulo, a
 Se hizo un estudio con 30 personas mostrándoles codificaciones para ver cómo de buena era esa codificación. El resultado es 
 que el color es lo peor, porque hay mucho daltónico. 
 
-**PONER IMAGEN DE LA DIAPO**
+![ranking de visualizaciones](img/ranking.png)
 
 Lo mejor es intentar que el gráfico quede bien en vlanco y negro y luego ya, si queremos reforzar, poner color. 
 
@@ -155,15 +155,17 @@ Podemos hacer:
 ## life countries
 
 
+## Datos geográficos
+
+Los datos geográficos se pueden codificar en formatos espaciales como el geojson, topojson o shapefile.
+
+Los ficheros geojson o topojson se pueden encontrar en internet (aquí teneis Madrid: https://github.com/codeforamerica/click_that_hood/blob/master/public/data/madrid.geojson)
+
+No obstante para cosas más específicas, os podéis crear vuestro propio ficheros con esta herramienta online:
+http://geojson.io/
+
+Una vez que creáis vuestro fichero, lo podéis abrir en Tableau como fichero espacial.
 
 ## Chascariillos
 
-Geojson : formato paran generar áreas. Hay páginas para crártelos o bajártelos. Por ejemplo, te puedes bajar los barrios de Madrid. 
-
 [Catálogo de visualizaciones](https://xeno.graphics/articles/on-graphonyms-the-importance-of-chart-type-names/)
-
-Tableau es capaz de leerlo. 
-
-Por ejemplo, [esta página]
-
-
